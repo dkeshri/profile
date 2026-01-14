@@ -1,9 +1,8 @@
 name: Build & Deploy Angular to dkeshri.github.io
 
 on:
-  push:
-    branches:
-      - main
+  # run this workflow manually.
+  workflow_dispatch:
 
 jobs:
   deploy:
