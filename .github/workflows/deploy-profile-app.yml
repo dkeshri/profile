@@ -22,7 +22,9 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npm run build -- --configuration production --base-href /
+        run: |
+            cd ./web-app
+            npm run build -- --configuration production --base-href /
 
       - name: Clone target repo (dkeshri.github.io)
         run: |
