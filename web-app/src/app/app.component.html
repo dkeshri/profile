@@ -5,18 +5,69 @@
       <h1>Software Engineer</h1>
       <p class="years">7+ years experience</p>
       <p class="about">
-        Backend & cloud-focused software engineer building scalable .NET microservices, Angular front-ends, and IoT solutions. Experienced with Azure, CI/CD and distributed systems.
+        Backend & cloud-focused software engineer building scalable .NET microservices, Angular front-ends, and IoT
+        solutions. Experienced with Azure, CI/CD and distributed systems.
       </p>
     </div>
   </div>
 </header>
 
+<!-- New: Work Profile slider + Resume download -->
+
+
 <main class="content">
+  <section id="work-profile" class="work-profile">
+    <div class="work-header" style="display:flex;align-items:center;justify-content:space-between;margin:0 0 1rem;">
+      <h2>Work Profile</h2>
+      <div>
+        <a href="assets/Deepak_Keshri_Resume.pdf" download class="btn"
+          style="padding:.5rem .75rem;border-radius:4px;background:#007acc;color:#fff;text-decoration:none;">Download
+          Resume</a>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:.5rem;">
+      <button type="button" (click)="scrollLeft()" aria-label="Scroll left" style="padding:.4rem .6rem;">‹</button>
+
+      <div #slider class="profile-slider"
+        style="display:flex;overflow-x:auto;gap:1rem;scroll-behavior:smooth;padding:.5rem 0;">
+        <!-- slide 1 -->
+        <div class="work-card"
+          style="flex:0 0 300px;border:1px solid #e0e0e0;padding:1rem;border-radius:6px;background:#fff;">
+          <h3>Cloud Microservices</h3>
+          <p>Design & implementation of resilient .NET microservices, CI/CD and performance tuning.</p>
+          <p><small>Azure, Kubernetes, Docker</small></p>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="work-card"
+          style="flex:0 0 300px;border:1px solid #e0e0e0;padding:1rem;border-radius:6px;background:#fff;">
+          <h3>IoT Telemetry</h3>
+          <p>Scalable telemetry pipelines using Azure IoT Hub, Event Grid and serverless processors.</p>
+          <p><small>Streaming, Eventing, Processing</small></p>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="work-card"
+          style="flex:0 0 300px;border:1px solid #e0e0e0;padding:1rem;border-radius:6px;background:#fff;">
+          <h3>Full Stack</h3>
+          <p>Angular front-ends integrated with REST APIs and cloud services.</p>
+          <p><small>Angular, TypeScript, .NET</small></p>
+        </div>
+
+        <!-- add more slides as needed -->
+      </div>
+
+      <button type="button" (click)="scrollRight()" aria-label="Scroll right" style="padding:.4rem .6rem;">›</button>
+    </div>
+  </section>
   <section class="experience">
     <h2>Experience</h2>
     <ul>
-      <li><strong>Senior Software Engineer</strong> — Design & implement cloud-native microservices, performance tuning, mentoring teams.</li>
-      <li><strong>Full Stack Developer</strong> — Angular front-ends, REST APIs, integration with IoT devices and message brokers.</li>
+      <li><strong>Senior Software Engineer</strong> — Design & implement cloud-native microservices, performance tuning,
+        mentoring teams.</li>
+      <li><strong>Full Stack Developer</strong> — Angular front-ends, REST APIs, integration with IoT devices and
+        message brokers.</li>
     </ul>
   </section>
 
