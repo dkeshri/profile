@@ -1,38 +1,74 @@
 import { Component, OnInit } from '@angular/core';
+import { Carousel } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+import { Tag } from 'primeng/tag';
 @Component({
   selector: 'app-work-experience',
-  imports: [],
+  imports: [Carousel, ButtonModule, Tag],
   templateUrl: './work-experience.html',
   styleUrl: './work-experience.css',
 })
 export class WorkExperience implements OnInit {
 
   index = 0;
-
-  experiences = [
+  products = [
     {
-      company: 'Nagarro India',
-      period: '2021 – Present',
-      desc: 'IoT Platform, Terminal Management System',
-      tech: '.NET Core, Angular, Azure, Docker'
+    name: 'deeepak ', 
+    image:'galleria/galleria1.jpg',
+    price:20,
+    inventoryStatus:'INSTOCK'
     },
     {
-      company: 'American Epay Systems',
-      period: '2018 – 2021',
-      desc: 'Payroll & attendance management systems',
-      tech: '.NET Web API, Angular, MS SQL'
+    name: 'shunham ',
+    price:20,
+    image:'galleria/galleria2.jpg',
+    inventoryStatus:'LOWSTOCK'
     },
     {
-      company: 'Blueforce-6',
-      period: 'US Army Project',
-      desc: 'Okta authentication & security APIs',
-      tech: 'C#, Okta, REST APIs'
+    name: 'pradepe',
+    price:20,
+    image:'galleria/galleria2.jpg',
+    inventoryStatus:'LOWSTOCK'
     }
   ];
+  responsiveOptions: any[] | undefined;
+
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.index = (this.index + 1) % this.experiences.length;
-    }, 4000);
+    this.responsiveOptions = [
+            {
+                breakpoint: '1400px',
+                numVisible: 2,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1199px',
+                numVisible: 2,
+                numScroll: 1
+            },
+            {
+                breakpoint: '767px',
+                numVisible: 1,
+                numScroll: 1
+            },
+            {
+                breakpoint: '575px',
+                numVisible: 1,
+                numScroll: 1
+            }
+        ]
   }
+
+  getSeverity(status: string) {
+        switch (status) {
+            case 'INSTOCK':
+                return 'success';
+            case 'LOWSTOCK':
+                return 'warn';
+            case 'OUTOFSTOCK':
+                return 'danger';
+            default:
+                return 'info';
+        }
+    }
 }
