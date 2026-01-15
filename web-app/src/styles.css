@@ -1,18 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
-:root {
-  --primaryColor: #373B44;
-  --secondaryColor: #4a4e58;
-  --textSecondary: grey;
-  --scrollColor: #b3b6bb;
-  /*ced1d8*/
-  --scrollBGColor: rgb(236, 229, 229);
-  --scrollBorderColor: #6e6f70;
-  --bannerTextSecondaryColor: #595f6d;
-  --skillBGColor: white;
-  --skillColor: var(--primaryColor);
-  --skillProgressBarBorderColor: #1d8997;
-  --navBarHeight: 3.4rem;
-  --LogoBorderColor: #3f3f72;
-  --footerHeight: 3rem;
-}
+@import "tailwindcss";
