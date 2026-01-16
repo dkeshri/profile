@@ -1,25 +1,30 @@
 <section id="about" class="relative isolate min-h-screen">
   <!-- Background gradient -->
-  <div class="absolute inset-x-0 -top-40 -z-10 blur-3xl">
-    <div class="mx-auto h-[40rem] w-[72rem] bg-gradient-to-tr from-indigo-300 to-pink-300 opacity-30 rotate-12"></div>
+  <div class="absolute inset-x-0 -top-40 -z-10 blur-3xl overflow-hidden">
+    <div class=" mx-auto h-[40rem] w-full max-w-[72rem] bg-gradient-to-tr
+     from-indigo-300 to-pink-300 opacity-30 rotate-12 "></div>
   </div>
   <!-- Hero Content -->
   <div class="pt-32 px-6 flex items-center min-h-screen">
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center fade-up">
       <div>
         <h2 class="text-5xl font-semibold sm:text-6xl">
-          Deepak Keshri
+          {{name}}
         </h2>
-        <p class="mt-4 text-2xl font-medium text-indigo-600">
-          Full Stack Developer
+        <p class="typing mt-4 text-2xl font-medium text-indigo-600" style="--chars: 18;">
+          {{roleText}}
         </p>
         <p class="mt-6 text-lg text-gray-600">
-          Dedicated and results-driven Software Engineer with over 7 years of hands-on experience
-          in designing and developing robust software solutions. Specializing in
-          .NET Core, EF Core, Angular. Proficient in design pattern, adhering to SOLID principles
-          to ensure robust and maintainable code. Recently engaged in IoT application
-          development, leveraging cutting-edge technologies such as Azure Cloud, IoT
-          Hub, Docker and InfluxDb to create innovative and scalable solutions.
+            Building
+          <strong class="font-semibold text-gray-900">scalable, cloud-ready applications</strong>
+            with
+          <strong class="font-semibold text-gray-900">.NET, Angular, and Azure</strong>
+            — backed by
+          <strong class="typing text-indigo-600" style="--chars: 7;">
+            {{years}}
+            <span class="align-super text-sm">+</span>
+            &nbsp;years</strong>
+          of real-world engineering experience.
         </p>
       </div>
 

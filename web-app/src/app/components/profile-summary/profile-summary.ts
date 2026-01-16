@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-profile-summary',
@@ -6,10 +6,18 @@ import { AfterViewInit, Component } from '@angular/core';
   templateUrl: './profile-summary.html',
   styleUrl: './profile-summary.css',
 })
-export class ProfileSummary implements AfterViewInit {
+export class ProfileSummary implements OnInit, AfterViewInit {
 
+  name = 'Deepak Keshri';
+  roleText = 'Full Stack Developer';
+  joiningDate = new Date('2018-12-10'); // Your joining date
+  years:number= 0;
   ngAfterViewInit(): void {
-    this.observeFade();
+    //this.observeFade();
+  }
+
+  ngOnInit() {
+    this.calculateExperience();
   }
 
   private observeFade() {
@@ -20,8 +28,25 @@ export class ProfileSummary implements AfterViewInit {
         }
       });
     });
-
     document.querySelectorAll('.fade-up')
       .forEach(el => observer.observe(el));
+  }
+
+  calculateExperience() {
+    const today = new Date();
+
+    let years = today.getFullYear() - this.joiningDate.getFullYear();
+
+    // Check if the joining month/day has not occurred yet this year
+    const hasNotAnniversaryHappened =
+      today.getMonth() < this.joiningDate.getMonth() ||
+      (today.getMonth() === this.joiningDate.getMonth() &&
+        today.getDate() < this.joiningDate.getDate());
+
+    if (hasNotAnniversaryHappened) {
+      years -= 1;
+    }
+
+    this.years = years;
   }
 }
