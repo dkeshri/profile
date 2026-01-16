@@ -1,5 +1,8 @@
 <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm
-                 hover:shadow-lg transition-all duration-300 w-full">
+            hover:shadow-lg transition-all duration-300 w-full hover:cursor-pointer" 
+            [class.border-indigo-300]="company.isCurrent"
+            [class.shadow-md]="company.isCurrent" [class.border-gray-200]="!company.isCurrent"
+            [class.shadow-sm]="!company.isCurrent">
     <!-- Company -->
     <div class="flex items-center gap-4 mb-3">
         <img [src]='company.logoUrl' [alt]="company.name + 'Logo'" class="w-10 h-10 object-contain" />

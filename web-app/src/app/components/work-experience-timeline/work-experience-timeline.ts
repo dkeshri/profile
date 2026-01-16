@@ -22,6 +22,7 @@ export class WorkExperienceTimeline implements OnInit{
         designation: 'Associate Staff Engineer',
         startDate: '21st Nov 2021',
         endDate: 'Present',
+        isCurrent: true,
         logoUrl: 'assets/img/NagarroLogo.png', 
         points: [
         'Designed and developed scalable backend services using .NET Core and EF Core.',
@@ -35,6 +36,7 @@ export class WorkExperienceTimeline implements OnInit{
         designation: 'Software Engineer',
         startDate: '18th Dec 2018',
         endDate: '21th Nov 2021',
+        isCurrent: false,
         logoUrl: 'assets/img/epaysystem.png',  
         points: [
         'Leading cloud-native development on Microsoft Azure.',
