@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ProfileImage } from "../profile-image/profile-image";
 
 @Component({
   selector: 'app-profile-summary',
-  imports: [],
+  imports: [ProfileImage],
   templateUrl: './profile-summary.html',
   styleUrl: './profile-summary.css',
 })
