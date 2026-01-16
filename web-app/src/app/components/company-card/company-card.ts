@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import Company from '../../models/company';
 
 @Component({
   selector: 'app-company-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './company-card.css',
 })
 export class CompanyCard {
-
+  @Input({ required: true }) company!: Company;
 }

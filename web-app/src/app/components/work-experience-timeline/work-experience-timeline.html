@@ -1,33 +1,19 @@
 <div class="relative">
-      <!-- Vertical Line -->
-      <div class="absolute left-4 top-0 h-full w-px bg-gray-300"></div>
-      <!-- Experience Item -->
-      <div class="relative flex gap-10 mb-20">
+    <!-- Vertical Line -->
+    <div class="absolute left-4 top-0 h-full w-px bg-gray-300"></div>
+    <!-- Experience Item -->
+    @for (company of companies; track company.name) {
+    <div class="relative flex gap-10 mb-20">
         <!-- Dot -->
         <div class="relative z-10">
-          <div class="w-8 h-8 rounded-full bg-white border-4 border-indigo-600 flex items-center justify-center">
-            <span class="w-2 h-2 bg-indigo-600 rounded-full"></span>
-          </div>
+            <div class="w-8 h-8 rounded-full bg-white border-4 border-indigo-600 flex items-center justify-center">
+                <span class="w-2 h-2 bg-indigo-600 rounded-full"></span>
+            </div>
         </div>
         <!-- Card -->
         <div class="flex-1">
-          <app-company-card></app-company-card>
+            <app-company-card [company]="company"></app-company-card>
         </div>
-      </div>
-
-      <!-- Experience Item -->
-      <div class="relative flex gap-10 mb-20">
-        <!-- Dot -->
-        <div class="relative z-10">
-          <div class="w-8 h-8 rounded-full bg-white border-4 border-indigo-600 flex items-center justify-center">
-            <span class="w-2 h-2 bg-indigo-600 rounded-full"></span>
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="flex-1">
-          <app-company-card></app-company-card>
-        </div>
-      </div>
-
     </div>
+    }
+</div>
