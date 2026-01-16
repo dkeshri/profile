@@ -1,31 +1,16 @@
-<section id="experience" class="">
-  <div class=" mx-auto fade-up">
-
-    <h2 class="text-4xl font-semibold text-center mb-12">
-      Work Experience
+<section id="experience" class="bg-white px-6 py-24">
+  <div class="max-w-6xl mx-auto fade-up">
+    <!-- Heading -->
+    <h2 class="text-4xl font-semibold text-center text-gray-900 mb-4">
+      My <span class="text-indigo-600" style="--chars: 18;">
+        Work Experience
+      </span>
     </h2>
-    <p-carousel [value]="products" [circular]="false"
-      [responsiveOptions]="responsiveOptions">
-      <ng-template let-product #item>
-        <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
-          <div class="mb-4">
-            <div class="relative mx-auto">
-              <img src="assets/img/DeepakImage.jpg" [alt]="product.name"
-                class="w-full rounded-border" />
-              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"
-                class="absolute dark:!bg-surface-900" />
-            </div>
-          </div>
-          <div class="mb-4 font-medium">{{ product.name }}</div>
-          <div class="flex justify-between items-center">
-            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
-            <span>
-              <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
-              <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
-            </span>
-          </div>
-        </div>
-      </ng-template>
-    </p-carousel>
+    <p class="text-center text-gray-500 max-w-2xl mx-auto mb-20">
+      A timeline of my professional journey, roles, and contributions.
+    </p>
+
+    <!-- Timeline -->
+    <app-work-experience-timeline/>
   </div>
 </section>
