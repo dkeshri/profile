@@ -4,6 +4,7 @@ export default interface Company {
     startDate: string;
     endDate: string;
     logoUrl: string;
+    isCurrent: boolean,
     designation:string;
     responsibilities?: string[];
     technologies?: string[];
