@@ -21,10 +21,7 @@ export class Header {
   }
   toggleMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
-    if(this.mobileMenuOpen){
-      this.mobileMenuOpenSignal.set(true);
-    } else {
-      this.mobileMenuOpenSignal.set(false);
-    }
+    this.mobileMenuOpenSignal.set(this.mobileMenuOpen);
+    
   }
 }
