@@ -1,0 +1,51 @@
+@if (mobileMenuOpen) {
+  <div
+    class="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm"
+    (click)="closeMenu()">
+
+    <!-- Slide panel -->
+    <div
+      class="absolute top-0 right-0 h-full w-72
+             bg-white shadow-2xl p-6
+             animate-[slideIn_0.3s_ease-out]"
+      (click)="$event.stopPropagation()">
+
+      <!-- Close button -->
+      <div class="flex justify-end mb-6">
+        <button
+          (click)="closeMenu()"
+          class="text-gray-700 hover:text-black
+                 text-xl cursor-pointer">
+          ✕
+        </button>
+      </div>
+
+      <!-- Mobile links -->
+      <nav class="flex flex-col gap-6 text-lg font-semibold">
+        <a href="#experience"
+           (click)="closeMenu()"
+           class="hover:text-indigo-600 cursor-pointer">
+          Experience
+        </a>
+
+        <a href="#skills"
+           (click)="closeMenu()"
+           class="hover:text-indigo-600 cursor-pointer">
+          Skills
+        </a>
+
+        <a href="#contact"
+           (click)="closeMenu()"
+           class="hover:text-indigo-600 cursor-pointer">
+          Contact
+        </a>
+
+        <a href="assets/Deepak_Keshri_Resume.pdf"
+           download
+           class="text-indigo-600 hover:underline cursor-pointer">
+          Download Resume
+        </a>
+      </nav>
+    </div>
+  </div>
+}
