@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CompanyCard } from "../company-card/company-card";
 import Company from '../../models/company';
+import { ProjectModal } from "../project-modal/project-modal";
 
 @Component({
   selector: 'app-work-experience-timeline',
-  imports: [CompanyCard],
+  imports: [CompanyCard, ProjectModal],
   templateUrl: './work-experience-timeline.html',
   styleUrl: './work-experience-timeline.css',
 })
@@ -15,6 +16,18 @@ export class WorkExperienceTimeline implements OnInit{
     this.companies = this.getCompanies();
   }
 
+  modalOpenSignal = signal(false);
+  selectedCompany: any = null;
+
+  openModal(company: any) {
+    this.selectedCompany = company;
+    this.modalOpenSignal.set(true);
+  }
+
+  closeModal() {
+    this.modalOpenSignal.set(false);
+    this.selectedCompany = null;
+  }
   getCompanies():Company[] {
     return [
       {
@@ -29,7 +42,11 @@ export class WorkExperienceTimeline implements OnInit{
         'Built responsive Angular applications with reusable components.',
         'Collaborated with cross-functional teams to deliver enterprise-grade solutions.',
         'Improved performance using SOLID principles and design patterns.'
-      ] 
+      ],
+      projects: [
+        { title: 'Project 1', description: 'Description 1' },
+        { title: 'Project 2', description: 'Description 2' },
+      ],
       },
       {
         name: 'American Epay System Pvt Ltd',
@@ -43,7 +60,11 @@ export class WorkExperienceTimeline implements OnInit{
         'Architected microservices using .NET and Docker.',
         'Implemented CI/CD pipelines and DevOps best practices.',
         'Mentoring developers and conducting code reviews.'
-      ]
+      ],
+      projects: [
+        { title: 'Project 1', description: 'Description 1' },
+        { title: 'Project 2', description: 'Description 2' },
+      ],
       }
     ]as Company[];
   }

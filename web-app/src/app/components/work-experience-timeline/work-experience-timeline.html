@@ -17,8 +17,13 @@
         </div>
         <!-- Card -->
         <div class="flex-1">
-            <app-company-card [company]="company"></app-company-card>
+            <app-company-card [company]="company" (click)="openModal(company)"></app-company-card>
         </div>
     </div>
     }
+    <app-project-modal
+        [company]="selectedCompany"
+        [isOpen]="modalOpenSignal()"
+        (closed)="closeModal()">
+    </app-project-modal>
 </div>
