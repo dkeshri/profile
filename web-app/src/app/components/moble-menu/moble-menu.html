@@ -13,12 +13,14 @@
             </h2>
 
             <!-- Close Button -->
-            <button (click)="closeMenu()" 
-            class="text-gray-700 hover:text-black text-xl cursor-pointer
+            <div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-indigo-100">
+                <button (click)="closeMenu()" class="text-gray-700 hover:text-black text-xl cursor-pointer
                     transition-transform transition-colors duration-300
                     hover:text-indigo-800 hover:rotate-90">
-                ✕
-            </button>
+                    ✕
+                </button>
+            </div>
+
         </div>
         <!-- Horizontal Line -->
         <hr class="border-t border-gray-300 mb-12 -mx-6">
