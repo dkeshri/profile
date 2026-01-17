@@ -9,4 +9,5 @@ export default interface Company {
     responsibilities?: string[];
     technologies?: string[];
     points: string[];
+    projects: { title: string; description: string }[];
 }
