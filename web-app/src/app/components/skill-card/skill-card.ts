@@ -8,6 +8,5 @@ import Skill from '../../models/skill';
   styleUrl: './skill-card.css',
 })
 export class SkillCard {
-  @Input({ required: true }) title!: string;
-  @Input() skills!: Skill[];
+  @Input() skill!: Skill;
 }

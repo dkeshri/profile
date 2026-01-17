@@ -1,4 +1,6 @@
 export default interface Skill {
-    icon: string;
-    name: string;
+    title: string;
+    subtitle?: string;
+    favSkils: string[];
+    nonFavSkills?: string[];
 }
