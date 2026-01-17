@@ -10,10 +10,10 @@
     </p>
 
     <!-- Skill Cards -->
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="grid gap-8 md:grid-cols-3 items-stretch">
 
       @for (skill of skills; track $index) {
-        <app-skill-card [skill]="skill"/>
+        <app-skill-card class="h-full" [skill]="skill"/>
       }
 
       <!-- Work Domains  -->
